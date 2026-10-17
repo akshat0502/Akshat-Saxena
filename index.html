@@ -6,6 +6,11 @@
     <title>Akshat Saxena | Java Full Stack Developer</title>
     <meta name="description" content="Akshat Saxena — Java Full Stack Developer specializing in Java, Spring Boot, React, REST APIs, SQL and AI-integrated applications.">
     <meta name="author" content="Akshat Saxena">
+    <meta name="theme-color" content="#f8fafc">
+    <meta property="og:title" content="Akshat Saxena | Java Backend & Full Stack Developer">
+    <meta property="og:description" content="Java, Spring Boot, REST APIs, React, SQL, and AI-assisted application development.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://akshat0502.github.io/Akshat-Saxena/">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="tailwind.config.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,7 +49,7 @@
                         <img src="img/arrow-icon-dark.png" alt="" class="w-3 hidden dark:block">
             </a>
             
-            <button  class="block md:hidden ml-3" onclick="openMenu()"> 
+            <button type="button" aria-label="Open navigation menu" aria-controls="sideMenu" class="block md:hidden ml-3" onclick="openMenu()"> 
                 <img src="img/menu-black.png" alt="" class="w-6 dark:hidden">
                 <img src="img/menu-white.png" alt="" class="w-6 hidden dark:block">
             </button>
@@ -53,7 +58,7 @@
 <!-- ---------mobile menu----------------->
 
         <ul id =sideMenu class="flex md:hidden flex-col gap-4 py-20 px-10  fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 font-Ovo dark:bg-darkHover dark:text-white">
-            <div class="absolute right-6 top-6" onclick="closeMenu()">
+            <div class="absolute right-6 top-6" role="button" tabindex="0" aria-label="Close navigation menu" onclick="closeMenu()" onkeydown="if(event.key==='Enter'||event.key===' '){closeMenu()}">
                 <img src="img/close-black.png" alt="" class="w-5 cursor-pointer dark:hidden" >
                 <img src="img/close-white.png" alt="" class="w-5 cursor-pointer hidden dark:block">
             </div>
@@ -74,12 +79,17 @@
     <div class="w-11/12 max-w-3xl text-center mx-auto h-screen flex  flex-col items-center justify-center gap-4" id="top">
         <img src="img/akshat-profile.png" alt="" class="rounded-full w-32">
         <h3 class="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo">Hi! I'm Akshat Saxena <img src="img/hand-icon.png" alt="" class="w-6"></h3>
-        <h1 class="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">Java Full Stack Developer</h1>
-        <p class="max-w-2xl mx-auto font-Ovo">Computer Science graduate skilled in Java backend development, AI-assisted development tools, REST APIs, SQL, React, and database-driven applications.</p>
+        <h1 class="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">Java Backend &amp; Full Stack Developer</h1>
+        <p class="max-w-2xl mx-auto font-Ovo">Computer Science graduate with hands-on experience in Java, Spring Boot, SQL, REST APIs, React, and database-driven applications. I enjoy building maintainable backend systems and using AI-assisted development tools to solve practical problems.</p>
         <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
             <a href="#contact" class="px-10 py-3 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2 dark:border-transparent">contact me <img src="img/right-arrow-white.png" alt="" class="w-4"></a>
 
-            <a href="img/Akshat Saxena Resume.pdf" download class="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black">my resume <img src="img/download-icon.png" alt="" class="w-4"></a>
+            <a href="img/Akshat Saxena Resume.pdf" download class="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black">Download Resume <img src="img/download-icon.png" alt="" class="w-4"></a>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-5 mt-2 text-sm font-semibold">
+            <a href="https://github.com/akshat0502" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4">GitHub ↗</a>
+            <a href="https://www.linkedin.com/in/akshat0502/" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4">LinkedIn ↗</a>
+            <a href="mailto:akshat.seth0508@gmail.com" class="underline underline-offset-4">Email me ↗</a>
         </div>
     </div>
 <!-- -------------------about section ------------------->
@@ -106,7 +116,7 @@
                             <img src="img/code-icon-dark.png" alt="" class="w-7 mt-3 hidden dark:block">
                             
                             <h3 class="my-4 font-semibold text-gray-700 dark:text-white ">Languages</h3>
-                            <p class="text-gray-600 text-sm dark:text-white/80">Java, SQL, JavaScript, HTML, CSS, React</p>
+                            <p class="text-gray-600 text-sm dark:text-white/80">Java, SQL, JavaScript, HTML, CSS</p>
                         </li>
                         <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
                             <img src="img/edu-icon.png" alt="" class="w-7 mt-3 dark:hidden">
@@ -167,7 +177,7 @@
             <div class="border border-gray-400 rounded-lg px-8 py-10 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
                 <img src="img/spring.png" alt="" class="w-10">
                 <h3 class="text-lg my-4 text-gray-700 dark:text-white">Database & Security</h3>
-                <p class="text-sm text-gray-600 leading-6 dark:text-white/80">SQL, MySQL, PostgreSQL, JDBC, Hibernate, JPA, validation, exception handling and database persistence.</p>
+                <p class="text-sm text-gray-600 leading-6 dark:text-white/80">SQL, MySQL, PostgreSQL, JDBC, Hibernate, JPA, Spring Security, JWT, validation, exception handling and database persistence.</p>
             </div>
             <div class="border border-gray-400 rounded-lg px-8 py-10 hover:shadow-black cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
                 <img src="img/github2.png" alt="" class="w-10">
@@ -201,7 +211,7 @@
             <div class="aspect-square bg-[url('img/work-2.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group overflow-hidden">
                 <div class="bg-white/95 w-11/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-4 px-5 duration-500 group-hover:bottom-7">
                     <h2 class="font-semibold text-lg">Student Attendance System</h2>
-                    <p class="text-sm text-gray-700 mt-1">Spring Boot • React/Vite • REST API</p>
+                    <p class="text-sm text-gray-700 mt-1">Spring Boot • React • MySQL • REST APIs</p>
                     <p class="text-xs text-gray-600 mt-2 leading-5">Full-stack attendance system with Admin, Teacher and Student dashboards, JWT authentication, role-based authorization, attendance history and subject-wise insights.</p>
                     <div class="flex gap-4 mt-3 text-sm font-semibold">
                         <a href="https://github.com/akshat0502/Student-Attendance-System" target="_blank" rel="noopener noreferrer" class="underline">GitHub ↗</a>
@@ -215,14 +225,14 @@
                     <p class="text-sm text-gray-700 mt-1">Spring Boot • REST APIs • Hibernate/JDBC</p>
                     <p class="text-xs text-gray-600 mt-2 leading-5">Student record management backend with CRUD operations, validation, exception handling and database persistence using a layered architecture.</p>
                     <div class="flex flex-wrap gap-4 mt-3 text-sm font-semibold">
-                        <a href="https://github.com/akshat0502?tab=repositories" target="_blank" rel="noopener noreferrer" class="underline">GitHub Repositories ↗</a>
+                        <a href="https://github.com/akshat0502?tab=repositories" target="_blank" rel="noopener noreferrer" class="underline">Browse GitHub Repositories ↗</a>
                     </div>
                 </div>
             </div>
         </div>
 
         <a href="https://github.com/akshat0502?tab=repositories" target="_blank" rel="noopener noreferrer" class="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500 dark:text-white dark:border-white dark:hover:bg-darkHover">
-            View all GitHub projects
+            View All GitHub Projects
             <img src="img/right-arrow-bold.png" alt="" class="w-4 dark:hidden">
             <img src="img/right-arrow-bold-dark.png" alt="" class="w-4 hidden dark:block">
         </a>
@@ -251,7 +261,7 @@
     <!-- -------- certifications & education -------- -->
     <div id="certifications" class="w-full px-[12%] py-10 scroll-mt-20">
         <h4 class="text-center mb-2 text-lg font-Ovo">Qualifications</h4>
-        <h2 class="text-center text-5xl font-Ovo">Education & Certifications</h2>
+        <h2 class="text-center text-5xl font-Ovo">Education &amp; Certifications</h2>
         <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mt-12">
             <div class="border border-gray-300 rounded-2xl p-7 dark:border-white/20 dark:bg-darkHover/30">
                 <p class="text-sm uppercase tracking-wide text-gray-500 dark:text-gray-400">Education</p>
@@ -300,6 +310,7 @@
                 <img src="img/right-arrow-white.png" alt="" class="w-4">
             </button>
         </form>
+        <p class="text-center text-sm mt-5 text-gray-600 dark:text-gray-300">Prefer email? <a href="mailto:akshat.seth0508@gmail.com" class="underline underline-offset-4">akshat.seth0508@gmail.com</a></p>
     </div>
 
 <!-- ------------------------footer---------------->
@@ -323,8 +334,8 @@
             </ul>
         </div>
     </div>
-    
 <script src="script.js"></script>
+    
 
     
 </body>
