@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akshat Saxena | Java Full Stack Developer</title>
     <meta name="description" content="Akshat Saxena — Java Full Stack Developer specializing in Java, Spring Boot, React, REST APIs, SQL and AI-integrated applications.">
     <meta name="author" content="Akshat Saxena">
-    <meta name="theme-color" content="#f8fafc">
+    <meta name="theme-color" content="#080b16">
+    <meta name="keywords" content="Akshat Saxena, Java Developer, Spring Boot, Backend Developer, Full Stack Developer, React, REST API">
+    <meta property="og:image" content="img/akshat-profile.png">
     <meta property="og:title" content="Akshat Saxena | Java Backend & Full Stack Developer">
     <meta property="og:description" content="Java, Spring Boot, REST APIs, React, SQL, and AI-assisted application development.">
     <meta property="og:type" content="website">
@@ -17,14 +19,68 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="img/portfolio3.png">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap" rel="stylesheet">
-</head>
-<body class="overflow-x-hidden font-Outfit leading-8 dark:bg-darkTheme dark:text-white">
 
-    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden">
+    <style>
+      :root { color-scheme: dark; --bg:#080b16; --panel:rgba(17,24,39,.76); --line:rgba(148,163,184,.22); --muted:#aab4c8; }
+      html { scroll-padding-top: 90px; background:var(--bg); }
+      body { background: radial-gradient(ellipse at 50% -15%, rgba(91,33,182,.22), transparent 42%), var(--bg) !important; color:#e8edf8 !important; }
+      body > .fixed img { opacity:.35; }
+      nav.site-nav { background:rgba(8,11,22,.72); border-bottom:1px solid rgba(148,163,184,.10); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); }
+      nav ul { color:#e8edf8; }
+      nav a, footer a { transition:color .2s ease; }
+      nav a:hover, footer a:hover { color:#67e8f9; }
+      #sideMenu { background:#0d1222 !important; border-left:1px solid var(--line); }
+      .hero-section { position:relative; isolation:isolate; }
+      .hero-section:before { content:""; position:absolute; z-index:-1; width:460px; height:460px; border-radius:50%; background:rgba(124,58,237,.14); filter:blur(100px); top:22%; left:50%; transform:translateX(-50%); pointer-events:none; }
+      .profile-ring { padding:5px; border-radius:999px; background:linear-gradient(135deg,#8b5cf6,#06b6d4,#34d399); box-shadow:0 0 45px rgba(124,58,237,.25); }
+      .eyebrow { color:#67e8f9; font-size:.72rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; line-height:1.5; }
+      .hero-title { color:#f8fafc; line-height:1.12; letter-spacing:-.04em; }
+      .gradient-text { background:linear-gradient(100deg,#c4b5fd 10%,#67e8f9 60%,#6ee7b7); -webkit-background-clip:text; background-clip:text; color:transparent; }
+      .hero-copy { color:#aab4c8; font-size:1.04rem; line-height:1.85; }
+      .tech-pill { border:1px solid rgba(148,163,184,.24); border-radius:999px; padding:.25rem .75rem; font-size:.78rem; color:#cbd5e1; background:rgba(15,23,42,.6); }
+      .primary-cta { border:0; box-shadow:0 10px 35px rgba(124,58,237,.2); transition:transform .2s, box-shadow .2s; }
+      .primary-cta:hover { transform:translateY(-3px); box-shadow:0 14px 40px rgba(6,182,212,.24); }
+      .secondary-cta { background:rgba(15,23,42,.65) !important; color:#e2e8f0 !important; border-color:var(--line) !important; transition:transform .2s,border-color .2s; }
+      .secondary-cta:hover { transform:translateY(-3px); border-color:#67e8f9 !important; }
+      section, #about, #services, #work, #experience, #certifications, #contact { scroll-margin-top:100px; }
+      #about, #services, #work, #experience, #certifications { position:relative; }
+      h2 { color:#f8fafc !important; letter-spacing:-.025em; }
+      h3 { color:#f1f5f9 !important; }
+      #about p, #services p, #experience p, #certifications p, #contact p { color:var(--muted) !important; }
+      #about li, #services .border, #experience > div > div, #certifications .border { background:var(--panel); border-color:var(--line) !important; box-shadow:0 14px 40px rgba(0,0,0,.12); backdrop-filter:blur(12px); }
+      #about li:hover, #services .border:hover, #certifications .border:hover { border-color:rgba(103,232,249,.45) !important; box-shadow:0 18px 50px rgba(6,182,212,.08); }
+      .project-grid { grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr)); }
+      .project-card { min-height:390px; aspect-ratio:auto !important; border:1px solid var(--line); background-color:#111827; background-size:cover; box-shadow:0 18px 45px rgba(0,0,0,.22); transition:transform .3s ease,border-color .3s ease; }
+      .project-card:hover { transform:translateY(-6px); border-color:rgba(103,232,249,.45); }
+      .project-card:before { content:""; position:absolute; inset:0; background:linear-gradient(180deg,rgba(8,11,22,.05),rgba(8,11,22,.72)); }
+      .project-info { background:rgba(9,14,28,.94) !important; border:1px solid rgba(148,163,184,.25); color:#e5e7eb; backdrop-filter:blur(14px); }
+      .project-info h2 { font-size:1.12rem; color:#f8fafc !important; }
+      .project-info p { color:#cbd5e1 !important; }
+      .project-info a { color:#67e8f9; text-decoration:none; }
+      .project-info a:hover { text-decoration:underline; }
+      #work > a { color:#e2e8f0 !important; border-color:var(--line) !important; }
+      #work > a:hover { background:rgba(124,58,237,.18) !important; }
+      .contact-section { background-image:radial-gradient(ellipse at 50% 0%,rgba(6,182,212,.08),transparent 55%) !important; }
+      .contact-input { background:rgba(15,23,42,.78) !important; border-color:var(--line) !important; color:#f8fafc !important; }
+      .contact-input::placeholder { color:#8190a8; }
+      #contact button { background:linear-gradient(100deg,#7c3aed,#0891b2) !important; border:0; }
+      body > div.mt-20 { border-top:1px solid var(--line); background:rgba(8,11,22,.7); padding-top:2rem; }
+      footer, .mt-20 p { color:#aab4c8; }
+      .reveal { opacity:0; transform:translateY(22px); transition:opacity .7s ease,transform .7s ease; }
+      .reveal.is-visible { opacity:1; transform:translateY(0); }
+      a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline:2px solid #67e8f9; outline-offset:4px; }
+      @media (max-width:640px) { .hero-section { min-height:92svh; padding-top:8.5rem; } .hero-title { font-size:2.55rem; } #about,#services,#work,#experience,#certifications,#contact { padding-left:6%; padding-right:6%; } #about h2,#services h2,#work h2,#experience h2,#certifications h2,#contact h2 { font-size:2.15rem; } .project-card { min-height:410px; } .project-info { padding:1rem; } }
+      @media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important; transition-duration:.01ms !important; } .reveal { opacity:1; transform:none; } }
+    </style>
+
+</head>
+<body class="overflow-x-hidden font-Outfit leading-8 bg-[#080b16] text-slate-100 dark:bg-darkTheme dark:text-white">
+
+    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-45%] opacity-40 pointer-events-none">
         <img src="img/header-bg-color.png" alt="" class="w-full">
     </div>
 
-    <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
+    <nav class="site-nav w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
         <a href="#top">
             <img src="img/logo-nm.png" alt="Logo" class="w-28 cursor-pointer mr14 dark:hidden">
             <img src="img/logo-dark.png" alt="Logo" class="w-28 cursor-pointer mr14 hidden dark:block">
@@ -34,6 +90,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#services">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
+            <li><a href="#certifications">Education</a></li>
             <li><a href="#certifications">Certifications</a></li>
             <li><a href="#work">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -76,15 +133,17 @@
     </nav>
 <!-- ------------------header ----------------------->
 
-    <div class="w-11/12 max-w-3xl text-center mx-auto h-screen flex  flex-col items-center justify-center gap-4" id="top">
-        <img src="img/akshat-profile.png" alt="" class="rounded-full w-32">
+    <div class="hero-section w-11/12 max-w-4xl text-center mx-auto min-h-screen flex flex-col items-center justify-center gap-4 pt-28 pb-16" id="top">
+        <div class="profile-ring mb-2"><img src="img/akshat-profile.png" alt="Portrait of Akshat Saxena" class="rounded-full w-32 h-32 object-cover"></div>
         <h3 class="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo">Hi! I'm Akshat Saxena <img src="img/hand-icon.png" alt="" class="w-6"></h3>
-        <h1 class="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">Java Backend &amp; Full Stack Developer</h1>
-        <p class="max-w-2xl mx-auto font-Ovo">Computer Science graduate with hands-on experience in Java, Spring Boot, SQL, REST APIs, React, and database-driven applications. I enjoy building maintainable backend systems and using AI-assisted development tools to solve practical problems.</p>
+        <p class="eyebrow">OPEN TO SOFTWARE DEVELOPMENT OPPORTUNITIES</p>
+        <h1 class="hero-title text-3xl sm:text-6xl lg:text-[66px] font-Ovo">Java Backend <span class="gradient-text">&amp; Full Stack</span> Developer</h1>
+        <p class="hero-copy max-w-2xl mx-auto font-Ovo">Computer Science graduate with hands-on experience building database-driven applications using Java, Spring Boot, REST APIs, React and SQL. Interested in reliable backend systems, secure APIs and practical AI-powered products.</p>
+        <div class="flex flex-wrap justify-center gap-2 mt-2"><span class="tech-pill">Java 21</span><span class="tech-pill">Spring Boot</span><span class="tech-pill">REST APIs</span><span class="tech-pill">React</span><span class="tech-pill">PostgreSQL / MySQL</span></div>
         <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
-            <a href="#contact" class="px-10 py-3 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2 dark:border-transparent">contact me <img src="img/right-arrow-white.png" alt="" class="w-4"></a>
+            <a href="#contact" class="primary-cta px-10 py-3 border rounded-full bg-gradient-to-r from-[#7c3aed] to-[#06b6d4] text-white flex items-center gap-2 dark:border-transparent">contact me <img src="img/right-arrow-white.png" alt="" class="w-4"></a>
 
-            <a href="img/Akshat Saxena Resume.pdf" download class="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black">Download Resume <img src="img/download-icon.png" alt="" class="w-4"></a>
+            <a href="img/Akshat%20Saxena%20Resume.pdf" download="Akshat-Saxena-Resume.pdf" class="secondary-cta px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black">Download Resume <img src="img/download-icon.png" alt="" class="w-4"></a>
         </div>
         <div class="flex flex-wrap items-center justify-center gap-5 mt-2 text-sm font-semibold">
             <a href="https://github.com/akshat0502" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4">GitHub ↗</a>
@@ -196,9 +255,9 @@
             A selection of projects demonstrating my Java backend, full-stack development, database and AI integration skills.
         </p>
 
-        <div class="grid grid-cols-auto my-10 gap-6 dark:text-black">
-            <div class="aspect-square bg-[url('img/work-1.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group overflow-hidden">
-                <div class="bg-white/95 w-11/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-4 px-5 duration-500 group-hover:bottom-7">
+        <div class="project-grid grid grid-cols-auto my-10 gap-6">
+            <div class="project-card aspect-square bg-[url('img/work-1.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group overflow-hidden">
+                <div class="project-info w-11/12 rounded-xl absolute bottom-4 left-1/2 -translate-x-1/2 py-4 px-5 duration-500 group-hover:bottom-6">
                     <h2 class="font-semibold text-lg">HireFlow-AI</h2>
                     <p class="text-sm text-gray-700 mt-1">Spring Boot • Gemini AI • JWT • PostgreSQL</p>
                     <p class="text-xs text-gray-600 mt-2 leading-5">AI-powered recruitment platform built with Java 21, Spring Boot, React, PostgreSQL and REST APIs; includes resume analysis and AI-powered job-resume matching with Google Gemini.</p>
@@ -208,8 +267,8 @@
                 </div>
             </div>
 
-            <div class="aspect-square bg-[url('img/work-2.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group overflow-hidden">
-                <div class="bg-white/95 w-11/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-4 px-5 duration-500 group-hover:bottom-7">
+            <div class="project-card aspect-square bg-[url('img/work-2.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group overflow-hidden">
+                <div class="project-info w-11/12 rounded-xl absolute bottom-4 left-1/2 -translate-x-1/2 py-4 px-5 duration-500 group-hover:bottom-6">
                     <h2 class="font-semibold text-lg">Student Attendance System</h2>
                     <p class="text-sm text-gray-700 mt-1">Spring Boot • React • MySQL • REST APIs</p>
                     <p class="text-xs text-gray-600 mt-2 leading-5">Full-stack attendance system with Admin, Teacher and Student dashboards, JWT authentication, role-based authorization, attendance history and subject-wise insights.</p>
@@ -219,8 +278,8 @@
                 </div>
             </div>
 
-            <div class="aspect-square bg-[url('img/work-4.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group overflow-hidden">
-                <div class="bg-white/95 w-11/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-4 px-5 duration-500 group-hover:bottom-7">
+            <div class="project-card aspect-square bg-[url('img/work-4.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group overflow-hidden">
+                <div class="project-info w-11/12 rounded-xl absolute bottom-4 left-1/2 -translate-x-1/2 py-4 px-5 duration-500 group-hover:bottom-6">
                     <h2 class="font-semibold text-lg">Student Information Management System</h2>
                     <p class="text-sm text-gray-700 mt-1">Spring Boot • REST APIs • Hibernate/JDBC</p>
                     <p class="text-xs text-gray-600 mt-2 leading-5">Student record management backend with CRUD operations, validation, exception handling and database persistence using a layered architecture.</p>
@@ -292,7 +351,7 @@
 
 <!-- -------contact------------->
 
-    <div id="contact" class="w-full px-[12%] py-10 scroll-mt-20 bg-[url('img/footer-bg-color.png')] bg-no-repeat bg-[length:90%_auto] bg-center dark:bg-none" >
+    <div id="contact" class="contact-section w-full px-[8%] md:px-[12%] py-16 scroll-mt-20 bg-[url('img/footer-bg-color.png')] bg-no-repeat bg-[length:90%_auto] bg-center dark:bg-none" >
         <h4 class="text-center mb-2 text-lg font-Ovo">Connect with me</h4>
         <h2 class="text-center text-5xl font-Ovo">Get in touch</h2>
         <p class="text-center max-w-2xl mx-auto  mt-5 mb-12 font-Ovo">Have a software development opportunity or project in mind? Reach out to discuss Java backend, full-stack development, or AI-assisted application development.
@@ -301,11 +360,11 @@
         <form method="POST" action="https://api.web3forms.com/submit" class="max-w-2xl mx-auto">
             <div class="grid grid-cols-auto gap-6 mt-10 mb-8">
                 <input type="hidden" name="access_key" value="e0b5a00e-9f59-4513-afa7-a31531a2c1ba">
-                <input type="text" name="name" placeholder="Enter your name" class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover dark:bg-darkHover/30 dark:border-white/90" required>
+                <input type="text" name="name" placeholder="Enter your name" autocomplete="name" class="contact-input flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover dark:bg-darkHover/30 dark:border-white/90" required>
 
-                <input type="email" name="email" placeholder="Enter your Email" class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover dark:bg-darkHover/30 dark:border-white/90" required>
+                <input type="email" name="email" placeholder="Enter your Email" autocomplete="email" class="contact-input flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover dark:bg-darkHover/30 dark:border-white/90" required>
             </div>
-            <textarea rows="6" name="message" placeholder="Enter your message" class="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-darkHover dark:bg-darkHover/30 dark:border-white/90" required></textarea>
+            <textarea rows="6" name="message" placeholder="Tell me about the opportunity or project..." class="contact-input w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-darkHover dark:bg-darkHover/30 dark:border-white/90" required></textarea>
             <button class="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover ">Submit now
                 <img src="img/right-arrow-white.png" alt="" class="w-4">
             </button>
