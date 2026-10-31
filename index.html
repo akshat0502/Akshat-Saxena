@@ -290,6 +290,18 @@
             </div>
         </div>
 
+        <section class="mt-20" aria-labelledby="github-projects-title">
+            <div class="text-center mb-8">
+                <p class="text-sm uppercase tracking-[.22em] text-cyan-500 font-semibold">More from GitHub</p>
+                <h3 id="github-projects-title" class="text-3xl sm:text-4xl font-Ovo mt-2">More projects & experiments</h3>
+                <p class="max-w-2xl mx-auto mt-3 font-Ovo text-gray-600 dark:text-gray-300">A live selection of my other public repositories. This section refreshes from GitHub, so newly published projects can appear here automatically.</p>
+            </div>
+            <div id="github-repo-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" aria-live="polite">
+                <div class="rounded-2xl border border-gray-300 dark:border-white/15 p-6 text-center text-sm text-gray-500 dark:text-gray-300">Loading public repositories from GitHub…</div>
+            </div>
+            <p id="github-repo-status" class="text-center text-xs text-gray-500 dark:text-gray-400 mt-5">Showing public, non-fork repositories other than the featured projects.</p>
+        </section>
+
         <a href="https://github.com/akshat0502?tab=repositories" target="_blank" rel="noopener noreferrer" class="w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500 dark:text-white dark:border-white dark:hover:bg-darkHover">
             View All GitHub Projects
             <img src="img/right-arrow-bold.png" alt="" class="w-4 dark:hidden">
